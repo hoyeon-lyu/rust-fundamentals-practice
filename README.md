@@ -13,7 +13,7 @@ rust-fundamentals를 공부하면서, 예제가 조금 더 많았으면 좋겠�
 
 # Rust Fundamentals 복습 예제
 
-[shipthatcode Rust Fundamentals](https://github.com/hoyeon-lyu/shipthatcode-study-Rust-Fundamentals) 레슨 01–04를 공부한 뒤, 배운 내용을 확인하려고 푼 복습 문제 모음입니다. 문제마다 입력/출력 테스트를 두고 스크립트로 채점합니다.
+[shipthatcode Rust Fundamentals](https://github.com/hoyeon-lyu/shipthatcode-study-Rust-Fundamentals) 레슨을 공부한 뒤(현재 01–09), 배운 내용을 확인하려고 푼 복습 문제 모음입니다. 문제마다 입력/출력 테스트를 두고 스크립트로 채점합니다.
 
 ## 문제 목록
 | # | 문제 | 다루는 개념 | 풀이 | 테스트 |
@@ -22,6 +22,10 @@ rust-fundamentals를 공부하면서, 예제가 조금 더 많았으면 좋겠�
 | 2 | [초를 시·분·초로](problems/ex2.md) | `i64`, `/`, `%` | [ex2.rs](solutions/ex2.rs) | ✅ 2/2 |
 | 3 | [누적합과 평균](problems/ex3.md) | `let mut`, 몫·나머지 | [ex3.rs](solutions/ex3.rs) | ✅ 2/2 |
 | 4 | [글자 수 vs 바이트 수](problems/ex4.md) | `String`, `&str`, UTF-8 | [ex4.rs](solutions/ex4.rs) | ✅ 2/2 |
+| 5 | [시계 형식으로 출력하기](problems/ex5.md) | `{:02}` 포맷 지정 | [ex5.rs](solutions/ex5.rs) | ✅ 3/3 |
+| 6 | [학점 계산기](problems/ex6.md) | `match` 범위 패턴 | [ex6.rs](solutions/ex6.rs) | ✅ 3/3 |
+| 7 | [콜라츠 수열](problems/ex7.md) | `loop`, `break`, `if / else` | [ex7.rs](solutions/ex7.rs) | ✅ 3/3 |
+| 8 | [빌려 쓰기와 고쳐 쓰기](problems/ex8.md) | 함수, `&str`, `&mut String` | [ex8.rs](solutions/ex8.rs) | ✅ 2/2 |
 
 ## 실행 방법
 Rust(`rustc`)가 설치되어 있어야 합니다.
@@ -29,7 +33,7 @@ Rust(`rustc`)가 설치되어 있어야 합니다.
 ./run_tests.sh        # 전체 채점
 ./run_tests.sh ex4    # 예제 하나만
 ```
-틀리면 실제 출력과 기대 출력의 차이(diff)를 보여줍니다.
+틀리면 실제 출력과 기대 출력의 차이(diff)를 보여줍니다. 테스트 하나당 2초 제한이 있어서, 무한 루프가 생기면 멈추고 `시간 초과`로 표시합니다.
 
 ## 폴더 구조
 ```
