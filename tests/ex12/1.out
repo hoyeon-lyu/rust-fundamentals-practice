@@ -1,0 +1,5 @@
+ok: 7
+error: division by zero
+error: unknown operator
+error: not a number
+ok: 3

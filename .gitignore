@@ -1,2 +1,5 @@
 build/
 .DS_Store
+# 컴파일된 실행 파일 제외
+solutions/*
+!solutions/*.rs

@@ -25,7 +25,7 @@ Python에서는 `def func():`와 같이 쓰던것을 Rust에서는 `fn func(){}`
 
 # Rust Fundamentals 복습 예제
 
-[shipthatcode Rust Fundamentals](https://github.com/hoyeon-lyu/shipthatcode-study-Rust-Fundamentals) 레슨을 공부한 뒤(현재 01–09), 배운 내용을 확인하려고 푼 복습 문제 모음입니다. 문제마다 입력/출력 테스트를 두고 스크립트로 채점합니다.
+[shipthatcode Rust Fundamentals](https://github.com/hoyeon-lyu/shipthatcode-study-Rust-Fundamentals) 레슨을 공부한 뒤(01–15 완료), 배운 내용을 확인하려고 푼 복습 문제 모음입니다. 문제마다 입력/출력 테스트를 두고 스크립트로 채점합니다.
 
 ## 문제 목록
 | # | 문제 | 다루는 개념 | 풀이 | 테스트 |
@@ -38,6 +38,10 @@ Python에서는 `def func():`와 같이 쓰던것을 Rust에서는 `fn func(){}`
 | 6 | [학점 계산기](problems/ex6.md) | `match` 범위 패턴 | [ex6.rs](solutions/ex6.rs) | ✅ 3/3 |
 | 7 | [콜라츠 수열](problems/ex7.md) | `loop`, `break`, `if / else` | [ex7.rs](solutions/ex7.rs) | ✅ 3/3 |
 | 8 | [빌려 쓰기와 고쳐 쓰기](problems/ex8.md) | 함수, `&str`, `&mut String` | [ex8.rs](solutions/ex8.rs) | ✅ 2/2 |
+| 9 | [점수 통계](problems/ex9.md) | `Vec`, 반복자 `map`·`sum`, `sort` | [ex9.rs](solutions/ex9.rs) | ✅ 3/3 |
+| 10 | [알파벳 빈도](problems/ex10.md) | `HashMap`, `entry().or_insert()` | [ex10.rs](solutions/ex10.rs) | ✅ 2/2 |
+| 11 | [성적표](problems/ex11.md) | `struct`, `impl` 메서드, `&Student` 참조 | [ex11.rs](solutions/ex11.rs) | ✅ 2/2 |
+| 12 | [안전한 계산기](problems/ex12.md) | `enum`, `match`, `Result` | [ex12.rs](solutions/ex12.rs) | ✅ 2/2 |
 
 ## 실행 방법
 Rust(`rustc`)가 설치되어 있어야 합니다.
