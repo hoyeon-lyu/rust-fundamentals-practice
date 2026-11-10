@@ -17,6 +17,13 @@ Owning and Borrowing 개념은 Rust에서 처음 들었습니다. 타입이 Stri
 ### Functions
 Python에서는 `def func():`와 같이 쓰던것을 Rust에서는 `fn func(){}`와 같이 쓰고, 특히 Python에서는 함수를 정의할때 들어가는 인자와 나오는 반환값의 타입을 표기하는 것이 필수가 아니고 그저 타입힌트를 전달해줄 뿐인데, Rust에서는 Java에서와 유사하게 `(p1: i32, p2: &str) -> &str`와 같이 작성하면 인자 p1과 p2는 i32와 &str가 되어야하고 &str를 반환해야합니다(Java에서는 `... String func(int num1, String name)...`와 같이 작성한다.). Functions파트에서도 이와같은 대조를 통해서 깊은 이해를 할 수 있었습니다. Python에서는 `input()`이면 되던게 Rust에서는 여러 절차를 거쳐야 해서 익숙치 않았는데, Functions를 배우면서 `input()`을 비슷하게 구현함으로써 Python생각도 많이 하게 되고, 함수의 중요성을 다시 깨닫게 되는 경험을 했습니다. 
 
+### Collections(Vector, HashMap, Iterator)
+해당 파트에서는 벡터는 단일 타입을 가지는, 해쉬맵은 key와 value를 가지고 자료들의 순서가 정해져있지 않는 자료들의 묶음이라는 것을 알 수 있게 해주었습니다. 그리고 벡터객체는 `vec!`매크로를 이용하거나 `Vec::new()`를 이용하면 생성 가능하고, 해쉬맵객체는, 우선 `use std::collections::HashMap;`으로 HashMap을 "HashMap"이라는 이름으로 사용하겠다고 선언한 후, `HashMap::new()`를 이용하면 생성 가능함을 알게 되었습니다. 벡터와 해쉬맵은 기본적으로 반복자(iterator)이며, .iter()를 통해서 이터레이터로 변환가능하고, 이터레이터로 변환하고 나면 `map()`이나 `filter()`를 사용할 수 있었습니다. `.split_whitespace()`와 같은 method를 사용하면 이터레이터 객체를 반환하고, 이터레이터 객체를 `.collect()`를 통해서 벡터객체로 변환 가능함을 알게 되었습니다. Python에서와 비슷하게, 파이썬에서는 `map(func, seq)`이고, 러스트에서는 `iter.map(|x| x.parse::<i64>())`와 같이 구성되어있음을 알 수 있었습니다. 파이썬에서는 map함수를 이용할때에  seq의 각각의 요소(성분)에 적용할 func을 map()함수의 인자로 넣어준 반면에, 러스트에서는 iter.map()의 인자에 1. 각각의 요소(성분)을 어떻게 부를 것인가를 `|s|`와 같이 나타내고, 그 뒤에 2. s를 이용한 변환식(func)을 적어준다는 것을 알게 되었습니다. filter()도 동일하게 작동함을 알 수 있었습니다. `.split_whitespace().filter().map().collect()`와 같이 여러 메소드로 묶여있는 것도 Python과 유사한 점이 많아 어렵지 않게 해결하였습니다.
+
+### Struct, Enum, Error Handling
+struct, enum, result/option은 러스트에서 처음 마주하여 조금 당황하였으나, 코드를 작성하다 보니 어느정도 적응되어 나중에는 어렵지 않게 문제를 해결할 수 있었습니다. 
+//여기서부터 이어서 작성하기
+
 글을 적으면서 Java에 대한 말도 하게 된 점 양해 부탁드립니다(제 첫 입문 언어였습니다.).
 
 **이후 Claude의 조언과 문제 풀이를 통해서** 첫번째로, rust-fundamentals의 복습 예제 풀이 중 lines()를 이용해서 여러번 값을 불러오는 것은 좋지 못한 코드 형태이며, stdin.lock().lines()를 통해서 lines을 mut로 정의한 다음에 lines을 이용해야 함을 알게 되었습니다. 두번째로, interface와 비슷한 개념인 trait(트레이트)에 대해 조금 알게 되었습니다. 해당 지식은 BufRead를 불러오는 과정을 이해하는데에 쓰였습니다. String, Control Flow, Functions, Owning and Borrowing에 대한 문제를 풀면서 String::from(&str매개변수) -> String, &str문자열.contains(&str문자열) -> bool, String문자열.replace(" ","") -> String, 그리고 문자열을 가지는 String객체에 대해 String문자열.clone()에 대해서 습득 할 수 있었습니다. 보통 이론 수업을 듣거나 그러한 article을 보더라도 직접 코드를 짜봐야 메소드/함수들이 뭐가 있는지 알 수 있고, 또 손에 익힐 수 있어서, 그런 점에 있어서 좋았습니다.
