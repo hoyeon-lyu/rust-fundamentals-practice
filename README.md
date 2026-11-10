@@ -25,7 +25,7 @@ struct, enum, result/option은 러스트에서 처음 마주하여 조금 당황
 
 글을 적으면서 Java에 대한 말도 하게 된 점 양해 부탁드립니다(제 첫 입문 언어였습니다.).
 
-**이후 Claude의 조언과 문제 풀이를 통해서** 첫번째로, rust-fundamentals의 복습 예제 풀이 중 lines()를 이용해서 여러번 값을 불러오는 것은 좋지 못한 코드 형태이며, stdin.lock().lines()를 통해서 lines을 mut로 정의한 다음에 lines을 이용해야 함을 알게 되었습니다. 두번째로, interface와 비슷한 개념인 trait(트레이트)에 대해 조금 알게 되었습니다. 해당 지식은 BufRead를 불러오는 과정을 이해하는데에 쓰였습니다. String, Control Flow, Functions, Owning and Borrowing에 대한 문제를 풀면서 String::from(&str매개변수) -> String, &str문자열.contains(&str문자열) -> bool, String문자열.replace(" ","") -> String, 그리고 문자열을 가지는 String객체에 대해 String문자열.clone()에 대해서 습득 할 수 있었습니다. 보통 이론 수업을 듣거나 그러한 article을 보더라도 직접 코드를 짜봐야 메소드/함수들이 뭐가 있는지 알 수 있고, 또 손에 익힐 수 있어서, 그런 점에 있어서 좋았습니다.
+**이후 Claude의 조언과 문제 풀이를 통해서** 첫번째로, rust-fundamentals의 복습 예제 풀이 중 lines()를 이용해서 여러번 값을 불러오는 것은 좋지 못한 코드 형태이며, stdin.lock().lines()를 통해서 lines을 mut로 정의한 다음에 lines을 이용해야 함을 알게 되었습니다. 두번째로, interface와 비슷한 개념인 trait(트레이트)에 대해 조금 알게 되었습니다. 해당 지식은 BufRead를 불러오는 과정을 이해하는데에 쓰였습니다. String, Control Flow, Functions, Owning and Borrowing에 대한 문제를 풀면서 String::from(&str매개변수) -> String, &str문자열.contains(&str문자열) -> bool, String문자열.replace(" ","") -> String, 그리고 문자열을 가지는 String객체에 대해 String문자열.clone()에 대해서 습득 할 수 있었습니다. 보통 이론 수업을 듣거나 그러한 article을 보더라도 직접 코드를 짜봐야 메소드/함수들이 뭐가 있는지 알 수 있고, 또 손에 익힐 수 있어서, 그런 점에 있어서 좋았습니다. 마지막 회차에서, match구문 안에서 오직 하나의 타입을 반환하여 match구문 바로 바깥의 `let operation = `에 전달하는 것 뿐만 아니라, 그 안에서 return 또한 동시에 할 수 있다는 것을 알게 되었습니다. 그 이유는 `return`이 `!` (never)타입이기 때문이라고 합니다. 그래서 대입하는 다른 값들의 자료형을 고려할 필요가 없다는 겁니다.
 
 이후 내용은 Claude가 작성하였습니다.
 
